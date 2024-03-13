@@ -4,16 +4,24 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  '@playwright/test':
-    specifier: ^1.42.1
-    version: 1.42.1
-  '@types/node':
-    specifier: ^20.11.26
-    version: 20.11.26
-  typescript:
-    specifier: ^5.4.2
-    version: 5.4.2
+importers:
+
+  .:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.42.1
+        version: 1.42.1
+      '@sample/test':
+        specifier: workspace:^
+        version: link:packages/sample-test
+      '@types/node':
+        specifier: ^20.11.26
+        version: 20.11.26
+      typescript:
+        specifier: ^5.4.2
+        version: 5.4.2
+
+  packages/sample-test: {}
 
 packages:
 

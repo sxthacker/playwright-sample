@@ -1,0 +1,2 @@
+export * from "./extended-test"
+
