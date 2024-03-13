@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
+import { SampleOptions } from "@sample/test";
 
-export default defineConfig({
+export default defineConfig<SampleOptions>({
   testDir: "./tests",
   testMatch: "*spec.ts",
   fullyParallel: true,
